@@ -1,0 +1,25 @@
+{
+  "name": "neon-reel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Neon Reel — a retro Hong Kong cinema culture explorer (React + TypeScript + Vite / Node + Express + SQLite).",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c magenta,cyan \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "npm run dev --workspace server",
+    "dev:web": "npm run dev --workspace client",
+    "seed": "npm run seed --workspace server",
+    "build": "npm run build --workspace client",
+    "typecheck": "npm run typecheck --workspace server && npm run typecheck --workspace client",
+    "start": "npm run start --workspace server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "engines": {
+    "node": ">=22.6.0"
+  }
+}

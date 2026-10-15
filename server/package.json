@@ -1,0 +1,27 @@
+{
+  "name": "@neon-reel/server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Neon Reel API — Express + SQLite (node:sqlite), written in TypeScript and executed natively by Node.",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "node --watch src/index.ts",
+    "start": "node src/index.ts",
+    "seed": "node src/db/seed.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.3.0",
+    "typescript": "^5.9.2"
+  },
+  "engines": {
+    "node": ">=22.6.0"
+  }
+}

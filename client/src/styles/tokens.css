@@ -1,0 +1,76 @@
+/**
+ * Neon Reel design tokens.
+ *
+ * One committed direction: 1980s–90s Hong Kong neon signage projected onto celluloid.
+ * A near-black bitumen ground, four saturated neon accents, aged "paper" for ticket
+ * stubs, and a bilingual marquee type system (Western poster lettering + Cantonese).
+ */
+
+:root {
+  /* ---- ground: warm-tinted black, never pure #000 ---- */
+  --ink-1000: #040306;
+  --ink-900: #07050a;
+  --ink-800: #0d0912;
+  --ink-700: #150e1c;
+  --ink-600: #1e1526;
+  --ink-500: #2a1f35;
+
+  /* ---- neon accents ---- */
+  --neon-pink: #ff2e88;
+  --neon-cyan: #29e7ff;
+  --neon-amber: #ffb01f;
+  --neon-jade: #35f0a0;
+  --neon-violet: #a25bff;
+  --neon-scarlet: #ff3b30;
+
+  /* ---- paper / type ---- */
+  --paper: #f4ebdd;
+  --paper-dim: #cbbfae;
+  --muted: #9a8fa6;
+  --muted-deep: #6d6377;
+
+  /* ---- hairlines & veils ---- */
+  --line: rgba(244, 235, 221, 0.1);
+  --line-strong: rgba(244, 235, 221, 0.22);
+  --veil: rgba(7, 5, 10, 0.72);
+
+  /* ---- type families ---- */
+  --font-display: 'Anton', 'Noto Sans HK', 'PingFang HK', 'Hiragino Sans', sans-serif;
+  --font-sign: 'Bebas Neue', 'Anton', 'Noto Sans HK', sans-serif;
+  --font-body: 'Noto Sans HK', 'PingFang HK', -apple-system, 'Helvetica Neue', sans-serif;
+  --font-mono: 'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  /* ---- fluid scale ---- */
+  --step--2: clamp(0.66rem, 0.63rem + 0.16vw, 0.75rem);
+  --step--1: clamp(0.78rem, 0.75rem + 0.18vw, 0.9rem);
+  --step-0: clamp(0.94rem, 0.9rem + 0.2vw, 1.06rem);
+  --step-1: clamp(1.1rem, 1.02rem + 0.4vw, 1.35rem);
+  --step-2: clamp(1.35rem, 1.2rem + 0.8vw, 1.85rem);
+  --step-3: clamp(1.75rem, 1.4rem + 1.7vw, 2.75rem);
+  --step-4: clamp(2.3rem, 1.6rem + 3.4vw, 4.2rem);
+  --step-5: clamp(3rem, 1.4rem + 7.2vw, 7rem);
+
+  /* ---- rhythm ---- */
+  --shell-max: 1240px;
+  --gutter: clamp(1.1rem, 0.6rem + 2.2vw, 3rem);
+  --radius-sm: 3px;
+  --radius: 6px;
+  --radius-lg: 14px;
+
+  /* ---- motion ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 160ms;
+  --dur: 320ms;
+  --dur-slow: 720ms;
+
+  /* ---- needs-based accent, set per element ---- */
+  --accent: var(--neon-pink);
+}
+
+/* A few named palettes reused across pages for art-directed variety. */
+:root {
+  --tint-pink: rgba(255, 46, 136, 0.5);
+  --tint-cyan: rgba(41, 231, 255, 0.5);
+  --tint-amber: rgba(255, 176, 31, 0.5);
+}
